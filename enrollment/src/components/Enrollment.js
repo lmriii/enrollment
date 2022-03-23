@@ -51,7 +51,7 @@ const Contact = () => {
                     </FormGroup>
                     <FormGroup>
                         <Label for='phone'>Phone</Label>
-                        <Input type='number' name='phone' id='phone' />
+                        <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='phone' id='phone' />
                     </FormGroup>
                     <FormGroup required check>
                         <Label check>
@@ -95,15 +95,15 @@ const Contact = () => {
                             </FormGroup>
                             <FormGroup>
                                 <Label for='momPhone1'>Home Phone</Label>
-                                <Input type='number' name='momPhone1' id='momPhone1' />
+                                <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='momPhone1' id='momPhone1' />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='dadPhone2'>Cell Phone</Label>
-                                <Input type='number' name='momPhone2' id='momPhone2' />
+                                <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='momPhone2' id='momPhone2' />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='momPhone3'>Work Phone</Label>
-                                <Input type='number' name='momPhone3' id='momPhone3' />
+                                <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='momPhone3' id='momPhone3' />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='momCompanyAddress'>Company & Address</Label>
@@ -135,15 +135,15 @@ const Contact = () => {
                             </FormGroup>
                             <FormGroup>
                                 <Label for='dadPhone1'>Home Phone</Label>
-                                <Input type='number' name='dadPhone1' id='dadPhone1' />
+                                <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='dadPhone1' id='dadPhone1' />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='dadPhone2'>Cell Phone</Label>
-                                <Input type='number' name='dadPhone2' id='dadPhone2' />
+                                <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='dadPhone2' id='dadPhone2' />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='dadPhone3'>Work Phone</Label>
-                                <Input type='number' name='dadPhone3' id='dadPhone3' />
+                                <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='dadPhone3' id='dadPhone3' />
                             </FormGroup>
                             <FormGroup>
                                 <Label for='dadCompanyAddress'>Company & Address</Label>
@@ -180,11 +180,11 @@ const Contact = () => {
                         </FormGroup>
                         <FormGroup>
                             <Label for='contact1Phone1'>Home Phone</Label>
-                            <Input type='number' name='contact1Phone1' id='contact1Phone1' />
+                            <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='contact1Phone1' id='contact1Phone1' />
                         </FormGroup>
                         <FormGroup>
                             <Label for='contact1Phone2'>Cell Phone</Label>
-                            <Input type='number' name='contact1Phone2' id='contact1Phone2' />
+                            <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='contact1Phone2' id='contact1Phone2' />
                         </FormGroup>
                     </div>
                     <hr />
@@ -209,11 +209,11 @@ const Contact = () => {
                         </FormGroup>
                         <FormGroup>
                             <Label for='contact2Phone1'>Home Phone</Label>
-                            <Input type='number' name='contact2Phone1' id='contact2Phone1' />
+                            <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='contact2Phone1' id='contact2Phone1' />
                         </FormGroup>
                         <FormGroup>
                             <Label for='contact2Phone2'>Cell Phone</Label>
-                            <Input type='number' name='contact2Phone2' id='contact2Phone2' />
+                            <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='contact2Phone2' id='contact2Phone2' />
                         </FormGroup>
                     </div>
                     <div style={{
@@ -233,13 +233,13 @@ const Contact = () => {
                             </FormGroup>
                             <FormGroup required check>
                                 <Label check>
-                                    <Input type="radio" name="radio1" />{' '}
+                                    <Input type="radio" name="radio2" value={'OK'} />{' '}
                                     OK
                                 </Label>
                             </FormGroup>
                             <FormGroup check>
                                 <Label check>
-                                    <Input type="radio" name="radio1" />{' '}
+                                    <Input type="radio" name="radio2" value={'Not-OK'} />{' '}
                                     Not OK
                                 </Label>
                             </FormGroup>
@@ -307,7 +307,7 @@ const Contact = () => {
 
 
 
-                <Button onSubmit={()=>{console.log('i worked too')}}>Submit Form</Button>
+                <Button>Submit Form</Button>
             </form>
         </>
     );
