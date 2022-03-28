@@ -26,6 +26,7 @@ const Contact = () => {
             <header>
                 <h1>MIDTOWN PRIMARY SCHOOL</h1>
                 <h2>Student Emergency Information</h2>
+                {/* <h1 style={{ color: 'red', backgroundColor: 'yellow', fontSize: '100px' }}>Alison Rules</h1> */}
             </header>
 
             <form ref={form} onSubmit={sendEmailForm} className='enrollmentForm' name='form'>
@@ -267,8 +268,10 @@ const Contact = () => {
 
                 </div>
                 <div style={{
-                    textAlign: 'left',
-                    margin: '2%'
+                    margin: '2%',
+                    borderWidth: '10px',
+                    borderStyle: 'solid'
+
                 }}>
 
                     <p>
@@ -283,8 +286,8 @@ const Contact = () => {
                         </FormGroup>
                         <p>born on</p>
                         <FormGroup>
-                            <Label for="dob">Date of Birth</Label>
-                            <Input type="date" name="dob" id="dob" placeholder="date placeholder" />
+                            <Label for="dob2">Date of Birth</Label>
+                            <Input type="date" name="dob2" id="dob2" placeholder="date placeholder" />
                         </FormGroup>
                     </div>
                     <p>I/We as parents/guardians</p>
@@ -337,32 +340,48 @@ const Contact = () => {
                     </FormGroup>
                     <h3>Insurance Information</h3>
                     <FormGroup>
-                        <Label for='insurance'>Insurance Provider</Label>
-                        <Input type='text' name='insurance' id='insurance' />
+                        <Label for='provider'>Insurance Provider</Label>
+                        <Input type='text' name='provider' id='provider' />
                     </FormGroup>
                     <FormGroup>
                         <Label for='policyNumber'>Policy Number</Label>
                         <Input type='text' name='policyNumber' id='policyNumber' />
                     </FormGroup>
-                    <p>Physician Information</p>
+                    <p>Physicians' Information</p>
                     <FormGroup>
                         <Label for='pediatrician'>Pediatrician</Label>
                         <Input type='text' name='pediatrician' id='pediatrician' />
                     </FormGroup>
                     <FormGroup>
-                        <Label for='momAddress'>Mother's Home Address (if different)</Label>
-                        <Input type='textarea' name='momAddress' id='momAddress' />
+                        <Label for='pediatricianPhone'>Pediatrician's Phone</Label>
+                        <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='pediatricianPhone' id='pediatricianPhone' />
                     </FormGroup>
+                    <FormGroup>
+                        <Label for='familyDoc'>Family Physician</Label>
+                        <Input type='text' name='familyDoc' id='familyDoc' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='docsPhone'>Physician's Phone</Label>
+                        <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='docsPhone' id='docsPhone' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='dentist'>Dentist</Label>
+                        <Input type='text' name='dentist' id='dentist' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='dentistPhone'>Dentist Phone</Label>
+                        <Input type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name='dentistPhone' id='dentistPhone' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='medicalProblems'>Medical Problems</Label>
+                        <Input type='textarea' name='medicalProblems' id='medicalProblems' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='allergies'>Allergies</Label>
+                        <Input type='text' name='allergies' id='allergies' />
+                    </FormGroup>
+
                 </div>
-
-
-
-
-
-
-
-
-
                 <Button>Submit Form</Button>
             </form>
         </>
